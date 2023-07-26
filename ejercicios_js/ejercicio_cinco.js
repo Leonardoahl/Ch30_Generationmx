@@ -16,7 +16,7 @@ let people = ["Maria", "Dani", "Luis", "Juan", "Camila"];
 console.log(people); 
 people.splice(people.indexOf("Dani"),1);                        //remove Dani
 people.splice(people.indexOf("Juan"),1);                        //remove Juan
-people.push(people.splice(people.indexOf("Luis"), 1)[0]);       // Move Luis to the front
+people.unshift(people.splice(people.indexOf("Luis"), 1)[0]);       // Move Luis to the front
 people.push("Leonardo");                                        // add my name
 for (let i = 0; i < people.length; i++){                        //log until Maria is printed
     console.log(people[i]);
@@ -24,4 +24,4 @@ for (let i = 0; i < people.length; i++){                        //log until Mari
 }
 console.log(people.indexOf("Maria"));                           // index of Maria
 console.log("Hay " + people.length + " personas en el array");  //check if there are only 4 left in the array
-console.log(people);
+console.log(people);    
